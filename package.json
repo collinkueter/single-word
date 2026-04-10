@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "clean:ios": "npx expo prebuild --clean && npx expo run:ios",
+    "clean:ios:device": "npx expo prebuild --clean && npx expo run:ios --device",
     "web": "expo start --web",
     "lint": "expo lint"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
     "@react-native-async-storage/async-storage": "2.2.0",
-    "expo": "~55.0.13",
+    "expo": "~55.0.14",
+    "expo-dev-client": "^55.0.24",
     "expo-haptics": "~55.0.14",
     "expo-status-bar": "~55.0.5",
     "node-html-parser": "^7.1.0",
@@ -24,6 +27,7 @@
     "zustand": "^5.0.12"
   },
   "devDependencies": {
+    "@expo/ngrok": "^4.1.3",
     "@types/react": "~19.2.10",
     "babel-preset-expo": "~55.0.16",
     "eslint": "^9.0.0",

@@ -4,10 +4,14 @@ import {
   View,
   Text,
   TextInput,
+  TouchableOpacity,
   Pressable,
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
+  ScrollView,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
@@ -17,6 +21,7 @@ import { RSVPReader } from './src/components/RSVPReader';
 import { TraditionalReader } from './src/components/TraditionalReader';
 import { Controls } from './src/components/Controls';
 import { extractTextFromUrl } from './src/utils/web-extractor';
+import { FeedbackModal } from './src/components/FeedbackModal';
 
 const SAMPLE_TEXT =
   'The science of speed reading is fascinating. Traditional reading forces your eyes to jump across the page in a series of movements called saccades. These movements consume significant mental energy and slow you down. Speed reading using RSVP — Rapid Serial Visual Presentation — eliminates eye movement entirely. Words come to you at a fixed focal point, one by one. Your brain processes each word instantly without searching for it. With practice, readers consistently achieve 400 to 600 words per minute. The average person reads around 250 words per minute. By training your focus and reducing subvocalization, you can double or even triple your reading speed while maintaining full comprehension of the text.';
@@ -28,9 +33,11 @@ export default function App() {
   const [inputText, setInputText] = useState(rawText);
   const [readMode, setReadMode] = useState<ReadMode>('rsvp');
   const [urlInput, setUrlInput] = useState('');
+  const [currentUrl, setCurrentUrl] = useState('');
   const [isFetching, setIsFetching] = useState(false);
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [fetchedTitle, setFetchedTitle] = useState<string | null>(null);
+  const [isFeedbackVisible, setIsFeedbackVisible] = useState(false);
 
   const isDark = theme === 'dark';
 
@@ -67,6 +74,7 @@ export default function App() {
       const result = await extractTextFromUrl(urlInput.trim());
       setInputText(result.text);
       setFetchedTitle(result.title);
+      setCurrentUrl(urlInput.trim());
       setUrlInput('');
     } catch (e: unknown) {
       setFetchError(e instanceof Error ? e.message : 'Something went wrong');
@@ -81,167 +89,194 @@ export default function App() {
       <SafeAreaProvider>
       <SafeAreaView style={[styles.safe, { backgroundColor: colors.bg }]}>
         <StatusBar style={isDark ? 'light' : 'dark'} />
-        <KeyboardAvoidingView
-          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-          style={styles.flex}
-        >
-          <View style={styles.homeContainer}>
-            {/* Header */}
-            <View style={styles.homeHeader}>
-              <View style={styles.homeHeaderRow}>
-                <View style={styles.titleRow}>
-                  <Text style={[styles.titleMain, { color: colors.text }]}>Single</Text>
-                  <Text style={[styles.titleAccent, { color: colors.accent }]}> Word</Text>
-                </View>
-                <Pressable
-                  onPress={() => setTheme(isDark ? 'light' : 'dark')}
-                  hitSlop={12}
-                  accessibilityLabel="Toggle dark mode"
-                >
-                  <Ionicons
-                    name={isDark ? 'sunny-outline' : 'moon-outline'}
-                    size={22}
-                    color={colors.secondary}
-                  />
-                </Pressable>
-              </View>
-              <Text style={[styles.subtitle, { color: colors.secondary }]}>
-                Read faster. Understand more.
-              </Text>
-            </View>
-
-            {/* URL import card */}
-            <View style={styles.urlSection}>
-              <View
-                style={[
-                  styles.urlCard,
-                  { backgroundColor: colors.inputBg, borderColor: colors.inputBorder },
-                ]}
-              >
-                <TextInput
-                  style={[styles.urlInput, { color: colors.text }]}
-                  placeholder="Enter a URL to import article…"
-                  placeholderTextColor={colors.placeholder}
-                  value={urlInput}
-                  onChangeText={setUrlInput}
-                  keyboardType="url"
-                  autoCapitalize="none"
-                  autoCorrect={false}
-                  returnKeyType="go"
-                  onSubmitEditing={handleFetchUrl}
-                  editable={!isFetching}
-                />
-                <Pressable
-                  style={[
-                    styles.fetchBtn,
-                    { opacity: urlInput.trim().length === 0 || isFetching ? 0.4 : 1 },
-                  ]}
-                  onPress={handleFetchUrl}
-                  disabled={urlInput.trim().length === 0 || isFetching}
-                  accessibilityLabel="Import article from URL"
-                >
-                  {isFetching ? (
-                    <ActivityIndicator color="#FFFFFF" size="small" />
-                  ) : (
-                    <Ionicons name="arrow-down-circle-outline" size={22} color="#FFFFFF" />
-                  )}
-                </Pressable>
-              </View>
-              {fetchError && (
-                <Text style={[styles.urlError, { color: colors.accent }]}>{fetchError}</Text>
-              )}
-              {fetchedTitle ? (
-                <Text style={[styles.urlTitle, { color: colors.secondary }]} numberOfLines={1}>
-                  Imported: {fetchedTitle}
-                </Text>
-              ) : null}
-            </View>
-
-            {/* Input card — grows to fill remaining space */}
-            <View
-              style={[
-                styles.inputCard,
-                { backgroundColor: colors.inputBg, borderColor: colors.inputBorder },
-              ]}
+        <View style={styles.flex}>
+          <KeyboardAvoidingView
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            style={styles.flex}
+          >
+            <ScrollView 
+              contentContainerStyle={styles.scrollContent}
+              keyboardShouldPersistTaps="handled"
+              bounces={false}
             >
-              <TextInput
-                multiline
-                placeholder="Paste any text here to begin…"
-                placeholderTextColor={colors.placeholder}
-                style={[styles.textInput, { color: colors.text }]}
-                value={inputText}
-                onChangeText={(t) => { setInputText(t); setFetchedTitle(null); }}
-                textAlignVertical="top"
-                autoCorrect={false}
-                autoCapitalize="none"
-              />
-              <View style={[styles.inputFooter, { borderTopColor: colors.inputBorder }]}>
-                {wordCount > 0 ? (
-                  <Text style={[styles.metaText, { color: colors.secondary }]}>
-                    {wordCount.toLocaleString()} words · ~{estimatedMin} min at 250 WPM
-                  </Text>
-                ) : (
-                  <Text style={[styles.metaText, { color: colors.placeholder }]}>
-                    Paste any text to begin
-                  </Text>
-                )}
-                <View style={styles.inputFooterActions}>
-                  {inputText.length > 0 && (
-                    <Pressable
-                      onPress={() => { setInputText(''); setFetchedTitle(null); }}
-                      hitSlop={8}
-                      accessibilityLabel="Clear text"
+              <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+                <View style={styles.homeContainer}>
+                  {/* Header */}
+                  <View style={styles.homeHeader}>
+                    <View style={styles.homeHeaderRow}>
+                      <View style={styles.titleRow}>
+                        <Text style={[styles.titleMain, { color: colors.text }]}>Single</Text>
+                        <Text style={[styles.titleAccent, { color: colors.accent }]}> Word</Text>
+                      </View>
+                      <Pressable
+                        onPress={() => setTheme(isDark ? 'light' : 'dark')}
+                        hitSlop={12}
+                        accessibilityLabel="Toggle dark mode"
+                      >
+                        <Ionicons
+                          name={isDark ? 'sunny-outline' : 'moon-outline'}
+                          size={22}
+                          color={colors.secondary}
+                        />
+                      </Pressable>
+                    </View>
+                    <Text style={[styles.subtitle, { color: colors.secondary }]}>
+                      Read faster. Understand more.
+                    </Text>
+                  </View>
+
+                  {/* URL import card */}
+                  <View style={styles.urlSection}>
+                    <View
+                      style={[
+                        styles.urlCard,
+                        { backgroundColor: colors.inputBg, borderColor: colors.inputBorder },
+                      ]}
                     >
-                      <Ionicons name="close-circle" size={18} color={colors.secondary} />
-                    </Pressable>
-                  )}
-                  <Pressable
-                    onPress={() => setInputText(SAMPLE_TEXT)}
-                    hitSlop={8}
-                    accessibilityLabel="Load sample text"
+                      <TextInput
+                        style={[styles.urlInput, { color: colors.text, backgroundColor: colors.inputBg }]}
+                        placeholder="Enter a URL to import article…"
+                        placeholderTextColor={colors.placeholder}
+                        value={urlInput}
+                        onChangeText={setUrlInput}
+                        keyboardType="url"
+                        autoCapitalize="none"
+                        autoCorrect={false}
+                        returnKeyType="go"
+                        onSubmitEditing={handleFetchUrl}
+                        editable={!isFetching}
+                      />
+                      <Pressable
+                        style={[
+                          styles.fetchBtn,
+                          { opacity: urlInput.trim().length === 0 || isFetching ? 0.4 : 1 },
+                        ]}
+                        onPress={handleFetchUrl}
+                        disabled={urlInput.trim().length === 0 || isFetching}
+                        accessibilityLabel="Import article from URL"
+                      >
+                        {isFetching ? (
+                          <ActivityIndicator color="#FFFFFF" size="small" />
+                        ) : (
+                          <Ionicons name="arrow-down-circle-outline" size={22} color="#FFFFFF" />
+                        )}
+                      </Pressable>
+                    </View>
+                    {fetchError && (
+                      <Text style={[styles.urlError, { color: colors.accent }]}>{fetchError}</Text>
+                    )}
+                    {fetchedTitle ? (
+                      <View style={styles.urlResultRow}>
+                        <Text style={[styles.urlTitle, { color: colors.secondary }]} numberOfLines={1}>
+                          Imported: {fetchedTitle}
+                        </Text>
+                        <TouchableOpacity 
+                          onPress={() => setIsFeedbackVisible(true)}
+                          hitSlop={{ top: 12, bottom: 12, left: 12, right: 12 }}
+                          style={styles.feedbackBtn}
+                        >
+                          <Text style={[styles.feedbackLink, { color: colors.accent }]}>Wrong content?</Text>
+                        </TouchableOpacity>
+                      </View>
+                    ) : null}
+                  </View>
+
+                  {/* Input card — grows to fill remaining space */}
+                  <View
+                    style={[
+                      styles.inputCard,
+                      { backgroundColor: colors.inputBg, borderColor: colors.inputBorder },
+                    ]}
                   >
-                    <Text style={[styles.sampleLink, { color: colors.accent }]}>Sample text</Text>
+                    <TextInput
+                      multiline
+                      placeholder="Paste any text here to begin…"
+                      placeholderTextColor={colors.placeholder}
+                      style={[styles.textInput, { color: colors.text, backgroundColor: colors.inputBg }]}
+                      value={inputText}
+                      onChangeText={(t) => { setInputText(t); setFetchedTitle(null); setCurrentUrl(''); }}
+                      textAlignVertical="top"
+                      autoCorrect={false}
+                      autoCapitalize="none"
+                    />
+                    <View style={[styles.inputFooter, { borderTopColor: colors.inputBorder }]}>
+                      {wordCount > 0 ? (
+                        <Text style={[styles.metaText, { color: colors.secondary }]}>
+                          {wordCount.toLocaleString()} words · ~{estimatedMin} min at 250 WPM
+                        </Text>
+                      ) : (
+                        <Text style={[styles.metaText, { color: colors.placeholder }]}>
+                          Paste any text to begin
+                        </Text>
+                      )}
+                      <View style={styles.inputFooterActions}>
+                        {inputText.length > 0 && (
+                          <Pressable
+                            onPress={() => { setInputText(''); setFetchedTitle(null); setCurrentUrl(''); }}
+                            hitSlop={8}
+                            accessibilityLabel="Clear text"
+                          >
+                            <Ionicons name="close-circle" size={18} color={colors.secondary} />
+                          </Pressable>
+                        )}
+                        <Pressable
+                          onPress={() => { setInputText(SAMPLE_TEXT); setCurrentUrl(''); }}
+                          hitSlop={8}
+                          accessibilityLabel="Load sample text"
+                        >
+                          <Text style={[styles.sampleLink, { color: colors.accent }]}>Sample text</Text>
+                        </Pressable>
+                      </View>
+                    </View>
+                  </View>
+
+                  {/* Start button */}
+                  <Pressable
+                    style={[styles.startBtn, { opacity: wordCount > 0 ? 1 : 0.35 }]}
+                    onPress={handleStart}
+                    disabled={wordCount === 0}
+                    accessibilityRole="button"
+                    accessibilityLabel="Start reading"
+                  >
+                    <Text style={styles.startBtnText}>Start Reading</Text>
                   </Pressable>
                 </View>
-              </View>
-            </View>
+              </TouchableWithoutFeedback>
+            </ScrollView>
+          </KeyboardAvoidingView>
 
-            {/* Start button */}
-            <Pressable
-              style={[styles.startBtn, { opacity: wordCount > 0 ? 1 : 0.35 }]}
-              onPress={handleStart}
-              disabled={wordCount === 0}
-              accessibilityRole="button"
-              accessibilityLabel="Start reading"
-            >
-              <Text style={styles.startBtnText}>Start Reading</Text>
-            </Pressable>
-
-            {/* Feature bullets — pinned to bottom */}
-            <View style={styles.features}>
-              {(
-                [
-                  ['flash', 'RSVP technology', 'Words flash at a fixed focal point'],
-                  ['eye', 'ORP highlighting', 'Your eye locks on the recognition point'],
-                  ['document-text', 'Full text mode', 'See your progress across the whole text'],
-                ] as const
-              ).map(([iconName, title, desc]) => (
-                <View
-                  key={title}
-                  style={[styles.featureRow, { borderBottomColor: colors.border }]}
-                >
-                  <View style={styles.featureIconWrap}>
-                    <Ionicons name={iconName} size={20} color={colors.accent} />
-                  </View>
-                  <View style={styles.featureText}>
-                    <Text style={[styles.featureTitle, { color: colors.text }]}>{title}</Text>
-                    <Text style={[styles.featureDesc, { color: colors.secondary }]}>{desc}</Text>
-                  </View>
+          {/* Feature bullets — outside KeyboardAvoidingView so they can fall behind keyboard */}
+          <View style={styles.features}>
+            {(
+              [
+                ['flash', 'RSVP technology', 'Words flash at a fixed focal point'],
+                ['eye', 'ORP highlighting', 'Your eye locks on the recognition point'],
+                ['document-text', 'Full text mode', 'See your progress across the whole text'],
+              ] as const
+            ).map(([iconName, title, desc]) => (
+              <View
+                key={title}
+                style={[styles.featureRow, { borderBottomColor: colors.border }]}
+              >
+                <View style={styles.featureIconWrap}>
+                  <Ionicons name={iconName} size={20} color={colors.accent} />
                 </View>
-              ))}
-            </View>
+                <View style={styles.featureText}>
+                  <Text style={[styles.featureTitle, { color: colors.text }]}>{title}</Text>
+                  <Text style={[styles.featureDesc, { color: colors.secondary }]}>{desc}</Text>
+                </View>
+              </View>
+            ))}
           </View>
-        </KeyboardAvoidingView>
+        </View>
+        <FeedbackModal
+          isVisible={isFeedbackVisible}
+          onClose={() => setIsFeedbackVisible(false)}
+          url={currentUrl}
+          extractedText={inputText}
+          title={fetchedTitle ?? undefined}
+          isDark={isDark}
+        />
       </SafeAreaView>
       </SafeAreaProvider>
     );
@@ -308,18 +343,31 @@ export default function App() {
           </Pressable>
         </View>
 
-        <Pressable
-          onPress={() => setTheme(isDark ? 'light' : 'dark')}
-          style={[styles.navBtn, styles.navBtnRight]}
-          hitSlop={12}
-          accessibilityLabel="Toggle theme"
-        >
-          <Ionicons
-            name={isDark ? 'sunny-outline' : 'moon-outline'}
-            size={20}
-            color={colors.secondary}
-          />
-        </Pressable>
+        <View style={styles.navActions}>
+          {currentUrl ? (
+            <TouchableOpacity
+              onPress={() => setIsFeedbackVisible(true)}
+              style={styles.navBtn}
+              hitSlop={12}
+              accessibilityLabel="Report issue"
+            >
+              <Ionicons name="flag-outline" size={20} color={colors.secondary} />
+            </TouchableOpacity>
+          ) : null}
+
+          <TouchableOpacity
+            onPress={() => setTheme(isDark ? 'light' : 'dark')}
+            style={[styles.navBtn, styles.navBtnRight]}
+            hitSlop={12}
+            accessibilityLabel="Toggle theme"
+          >
+            <Ionicons
+              name={isDark ? 'sunny-outline' : 'moon-outline'}
+              size={20}
+              color={colors.secondary}
+            />
+          </TouchableOpacity>
+        </View>
       </View>
 
       {/* Content */}
@@ -333,6 +381,15 @@ export default function App() {
 
       {/* Font size control — always visible at bottom */}
       <Controls />
+
+      <FeedbackModal
+        isVisible={isFeedbackVisible}
+        onClose={() => setIsFeedbackVisible(false)}
+        url={currentUrl}
+        extractedText={inputText}
+        title={fetchedTitle ?? undefined}
+        isDark={isDark}
+      />
     </SafeAreaView>
     </SafeAreaProvider>
   );
@@ -348,9 +405,10 @@ const styles = StyleSheet.create({
 
   // ── Home ──────────────────────────────────────────────────────────────────
   homeContainer: {
-    flex: 1,
     padding: 24,
-    paddingBottom: 16,
+  },
+  scrollContent: {
+    paddingBottom: 8,
   },
   homeHeader: {
     marginBottom: 28,
@@ -382,7 +440,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.1,
   },
   inputCard: {
-    flex: 1,
+    height: 220,
     borderRadius: 16,
     borderWidth: StyleSheet.hairlineWidth,
     overflow: 'hidden',
@@ -393,6 +451,7 @@ const styles = StyleSheet.create({
     padding: 16,
     fontSize: 16,
     lineHeight: 24,
+    minHeight: 160,
   },
   inputFooter: {
     flexDirection: 'row',
@@ -435,7 +494,8 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
   },
   features: {
-    marginBottom: 24,
+    paddingHorizontal: 24,
+    paddingBottom: 24,
   },
   featureRow: {
     flexDirection: 'row',
@@ -492,8 +552,24 @@ const styles = StyleSheet.create({
   },
   urlTitle: {
     fontSize: 12,
+    flex: 1,
+  },
+  urlResultRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginTop: 4,
     marginHorizontal: 4,
+    gap: 8,
+  },
+  feedbackBtn: {
+    paddingVertical: 2,
+    paddingLeft: 4,
+  },
+  feedbackLink: {
+    fontSize: 13,
+    fontWeight: '600',
+    textDecorationLine: 'underline',
   },
 
   // ── Reader ─────────────────────────────────────────────────────────────────
@@ -516,6 +592,11 @@ const styles = StyleSheet.create({
   navBtnText: {
     fontSize: 16,
     fontWeight: '600',
+  },
+  navActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
   },
   modePill: {
     flexDirection: 'row',

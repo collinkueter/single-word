@@ -15,20 +15,26 @@ export const ORPDisplay: React.FC<ORPDisplayProps> = ({ word, fontSize, theme })
   // Scale down font if the word would overflow. Available width = screen minus
   // wordRow paddingHorizontal (20×2) and a small safety margin (20).
   const availableWidth = screenWidth - 60;
-  const estimatedWordWidth = text.length * fontSize * 0.62;
+  
+  // Calculate how many characters we need to fit on either side of the ORP
+  // to keep it centered. The total "virtual" length is 2 * maxSide + 1.
+  const maxSideChars = Math.max(orpIndex, text.length - 1 - orpIndex);
+  const virtualLength = maxSideChars * 2 + 1;
+  
+  const estimatedWordWidth = virtualLength * fontSize * 0.62;
   const effectiveFontSize =
     estimatedWordWidth > availableWidth
-      ? Math.floor(availableWidth / (text.length * 0.62))
+      ? Math.floor(availableWidth / (virtualLength * 0.62))
       : fontSize;
 
   const prefix = text.substring(0, orpIndex);
   const orpLetter = text.substring(orpIndex, orpIndex + 1);
   const suffix = text.substring(orpIndex + 1);
 
-  // Give each side flex proportional to its character count so neither half
-  // overflows when the suffix is much longer than the prefix (or vice versa).
-  const prefixFlex = Math.max(prefix.length, 1);
-  const suffixFlex = Math.max(suffix.length, 1);
+  // Use equal flex for both sides to ensure the ORP (red letter) stays centered.
+  // We handle potential overflows by scaling the font size instead.
+  const prefixFlex = 1;
+  const suffixFlex = 1;
 
   const textColor = theme === 'dark' ? '#FFFFFF' : '#000000';
   const orpColor = '#FF3B30';
@@ -103,6 +109,8 @@ const styles = StyleSheet.create({
   guideTop: {
     position: 'absolute',
     top: 0,
+    left: '50%',
+    marginLeft: -1,
     width: 2,
     height: 14,
     borderRadius: 1,
@@ -110,6 +118,8 @@ const styles = StyleSheet.create({
   guideBottom: {
     position: 'absolute',
     bottom: 0,
+    left: '50%',
+    marginLeft: -1,
     width: 2,
     height: 14,
     borderRadius: 1,
