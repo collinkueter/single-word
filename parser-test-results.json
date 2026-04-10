@@ -1,0 +1,839 @@
+{
+  "timestamp": "2026-04-10T15:36:46.774Z",
+  "results": [
+    {
+      "site": "www.cnn.com",
+      "articleUrl": "https://www.cnn.com/2026/04/10/world/live-news/iran-war-trump-us-ceasefire",
+      "status": "success",
+      "wordCount": 4315,
+      "title": "Live updates: Israel and Hezbollah trade strikes ahead of high-stakes US-Iran talks | CNN",
+      "textPreview": "<!DOCTYPE html>Live updates: Israel and Hezbollah trade strikes ahead of high-stakes US-Iran talks | CNN@font-face { font-family: \"cnn_sans_condensed\"; font-weight: 700; src: url(/fonts/cnn/cnn_sans_c",
+      "category": "general"
+    },
+    {
+      "site": "www.foxnews.com",
+      "articleUrl": "https://www.foxnews.com/politics/hormuz-choke-point-persists-iran-halts-oil-traffic-despite-trump-ceasefire",
+      "status": "success",
+      "wordCount": 941,
+      "title": "Hormuz choke point persists as Iran halts oil traffic despite Trump ceasefire",
+      "textPreview": "close  Trump pressures Iran amid Strait of Hormuz tensions, calls for 'real agreement'  President Donald Trump continues to pressure Iran after traffic slowed in the Strait of Hormuz as concerns rise ",
+      "category": "general"
+    },
+    {
+      "site": "www.nbcnews.com",
+      "articleUrl": "https://www.nbcnews.com/news/weather",
+      "status": "success",
+      "wordCount": 972,
+      "title": "Weather News: Headlines and Video on Storms, Climate Change, Hurricanes and More",
+      "textPreview": "IE 11 is not supported. For an optimal experience visit our site on another browser.  Skip to Content  Weather  The latest weather stories, photos and videos.  Climate in crisis  Science news  Stephen",
+      "category": "general"
+    },
+    {
+      "site": "www.cbsnews.com",
+      "articleUrl": "https://www.cbsnews.com/news/iran-ceasefire-gas-price-up-down/",
+      "status": "success",
+      "wordCount": 578,
+      "title": "Will the Iran ceasefire quickly ease U.S. gas prices? Here's what experts think.",
+      "textPreview": "Although an eleventh-hour truce  between the U.S. and Iran  immediately eased tensions between the warring countries, it could take some time for Americans to see relief from the soaring fuel costs th",
+      "category": "general"
+    },
+    {
+      "site": "www.abcnews.go.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "general"
+    },
+    {
+      "site": "www.nytimes.com",
+      "articleUrl": "https://www.nytimes.com/live/2026/04/10/world/iran-war-trump-israel-lebanon",
+      "status": "success",
+      "wordCount": 10732,
+      "title": "Iran War Live Updates: Vance Departs for Iran Talks as Lebanon Impasse Threatens Cease-Fire",
+      "textPreview": "SKIP ADVERTISEMENT  Current time in  Tel Aviv/Beirut  6:36 p.m. April 10  Tehran  7:06 p.m. April 10  Pinned  UpdatedApril 10, 2026, 11:33 a.m. ET  Here’s the latest.  As Vice President JD Vance was h",
+      "category": "general"
+    },
+    {
+      "site": "www.washingtonpost.com",
+      "articleUrl": "https://www.washingtonpost.com/national/investigations/?itid=hp_top_nav_investigations",
+      "status": "success",
+      "wordCount": 920,
+      "title": "Investigations - The Washington Post",
+      "textPreview": "Exclusive  Catastrophic sewage spill followed years of delay on repairs, Post review finds  A Washington Post investigation reveals that a prolonged environmental review pushed back work on the Potoma",
+      "category": "general"
+    },
+    {
+      "site": "www.usatoday.com",
+      "articleUrl": "https://www.usatoday.com/story/news/politics/2026/04/09/supreme-court-sotomayor-slams-kavanaugh/89537753007/",
+      "status": "success",
+      "wordCount": 604,
+      "title": "Supreme Court's Sotomayor slams colleague Kavanaugh for ICE ruling",
+      "textPreview": "POLITICS  Supreme Court of the United States  Add Topic  Supreme Court's Sotomayor slams colleague Kavanaugh for ICE ruling  The justice spoke at the University of Kansas about a decision that allowed",
+      "category": "general"
+    },
+    {
+      "site": "www.wsj.com",
+      "articleUrl": null,
+      "status": "fetch-failed",
+      "error": "Homepage fetch: HTTP 401",
+      "category": "general"
+    },
+    {
+      "site": "www.nypost.com",
+      "articleUrl": "https://nypost.com/2026/04/10/us-news/trump-gives-zohran-mamdani-three-tips-to-improve-nyc-on-his-100th-day-as-mayor/",
+      "status": "success",
+      "wordCount": 388,
+      "title": "Exclusive | Trump gives Mamdani three tips to improve NYC on his 100th day as mayor: ‘Make it sparkle’",
+      "textPreview": "WASHINGTON — President Trump offered three suggestions to  Zohran Mamdani on his 100th day  running New York City — saying he wanted the mayor to make his hometown “sparkle.”  Trump, 79, and Mamdani, ",
+      "category": "general"
+    },
+    {
+      "site": "www.reuters.com",
+      "articleUrl": "https://www.reuters.com/world/asia-pacific/us-iran-ceasefire-deal-shows-strain-ahead-talks-with-oil-flows-squeezed-2026-04-10/",
+      "status": "success",
+      "wordCount": 526,
+      "title": "Iran demands Lebanon ceasefire, unfreezing of assets before peace talks",
+      "textPreview": "Summary  Iran says ceasefire must include Lebanon, unfreezing of assets  Vance tells Iran not to 'play us'  Israeli strikes across southern Lebanon continue on Friday  DUBAI/BEIRUT/JERUSALEM/ISLAMABAD",
+      "category": "general"
+    },
+    {
+      "site": "apnews.com",
+      "articleUrl": "https://apnews.com/article/inflation-prices-gas-federal-reserve-trump-bf00c3105d5da88a0b01d9107ed4ecee",
+      "status": "success",
+      "wordCount": 1044,
+      "title": "Soaring gas prices lead to biggest monthly inflation spike in four years",
+      "textPreview": "WASHINGTON (AP) — The largest monthly jump in gas prices in six decades caused a sharp spike in inflation in March, creating major challenges for the  inflation-fighters  at the Federal Reserve and he",
+      "category": "general"
+    },
+    {
+      "site": "www.bloomberg.com",
+      "articleUrl": "https://www.bloomberg.com/news/articles/2026-04-10/us-consumer-sentiment-drops-to-record-low-on-inflation-concerns?srnd=homepage-americas",
+      "status": "success",
+      "wordCount": 141,
+      "title": "US Consumer Sentiment Drops to Record Low on Price Concerns",
+      "textPreview": "Economics  Facebook  X  LinkedIn  Email  Link  Gift  Consumer Sentiment Falls to a Record Low on Inflation Concerns  Facebook  X  LinkedIn  Email  Link  Gift  Gift this article  Contact us:Provide new",
+      "category": "general"
+    },
+    {
+      "site": "www.cnbc.com",
+      "articleUrl": "https://www.cnbc.com/2026/04/09/stock-market-today-live-updates.html",
+      "status": "success",
+      "wordCount": 2822,
+      "title": "S&P 500 ticks higher Friday as benchmark wraps up big week following fragile Iran ceasefire: Live updates",
+      "textPreview": "Traders work on the floor at the New York Stock Exchange (NYSE) in New York City, U.S., April 8, 2026.  Brendan McDermid | Reuters  The  S&P 500  rose slightly on Friday, with the index on pace to pos",
+      "category": "general"
+    },
+    {
+      "site": "www.forbes.com",
+      "articleUrl": "https://www.forbes.com/sites/forbesstaff/article/tips-and-confidential-sources/",
+      "status": "extract-failed",
+      "error": "Could not load page (HTTP 403)",
+      "category": "general"
+    },
+    {
+      "site": "www.businessinsider.com",
+      "articleUrl": "https://www.businessinsider.com/ev-shakeout-us-market-tesla-toyota-2026-4",
+      "status": "success",
+      "wordCount": 398,
+      "title": "EV bloodbath: US sales plunge as Tesla tightens its grip",
+      "textPreview": "It's a bloodbath.  Loading audio narration...  New first-quarter 2026  EV  sales estimates from Cox Automotive show the US electric-vehicle market shrinking sharply, with total sales down 27% year ove",
+      "category": "general"
+    },
+    {
+      "site": "www.marketwatch.com",
+      "articleUrl": "https://www.marketwatch.com/story/this-chart-hints-at-a-coming-generational-shift-that-could-remove-a-critical-source-of-demand-for-stocks-be8eb475?mod=home_ln",
+      "status": "success",
+      "wordCount": 194,
+      "title": "A major long-term risk for investors is baby boomers liquidating their investments",
+      "textPreview": "Site Search  Clear  SEARCH  Advanced Search  ➔  Search Results  Symbols  No results found  All News  Articles  Video  Podcasts  0  Results  No Results Found  Authors  No results found  Sections  No re",
+      "category": "general"
+    },
+    {
+      "site": "www.thestreet.com",
+      "articleUrl": null,
+      "status": "fetch-failed",
+      "error": "Homepage fetch: HTTP 403",
+      "category": "general"
+    },
+    {
+      "site": "www.fortune.com",
+      "articleUrl": "https://www.fortune.com/2026/04/10/anthropic-too-dangerous-to-release-ai-model-means-for-its-upcoming-ipo/",
+      "status": "success",
+      "wordCount": 1583,
+      "title": "What Anthropic's too-dangerous-to-release AI model means for the AI race | Fortune",
+      "textPreview": "Anthropic has a new product with a major catch—it’s too powerful to be released.  Recommended Video  For a company valued at around $380 billion and reportedly preparing for an IPO this year, it’s an ",
+      "category": "general"
+    },
+    {
+      "site": "www.bbc.com",
+      "articleUrl": "https://www.bbc.com/news/articles/cp3l4yk5rlgo",
+      "status": "success",
+      "wordCount": 2167,
+      "title": "Ceasefire or no ceasefire, the Middle East's reshuffling is not yet done",
+      "textPreview": "Ceasefire or no ceasefire, the Middle East's reshuffling is not yet done  17 hours ago  Share  Save  Add as preferred on Google  Jeremy Bowen  International editor  BBC  The best hope for the ceasefir",
+      "category": "general"
+    },
+    {
+      "site": "www.theguardian.com",
+      "articleUrl": "https://www.theguardian.com/world/us-israel-war-on-iran",
+      "status": "success",
+      "wordCount": 350,
+      "title": "US-Israel war on Iran | The Guardian",
+      "textPreview": "US-Israel war on Iran  10 April 2026  Middle East crisis live  Middle East crisis live: Vance warns Iran not to ‘play’ US as he heads to Pakistan for talks  Politics live with Andrew Sparrow  Starmer ",
+      "category": "general"
+    },
+    {
+      "site": "www.aljazeera.com",
+      "articleUrl": "https://www.aljazeera.com/news/liveblog/2026/4/10/iran-war-live-israeli-attacks-on-lebanon-threaten-us-iran-ceasefire-talks",
+      "status": "extract-failed",
+      "error": "Couldn't extract readable text from this page",
+      "category": "general"
+    },
+    {
+      "site": "www.dw.com",
+      "articleUrl": "https://www.dw.com/en/latest-videos/s-62391524",
+      "status": "success",
+      "wordCount": 5666,
+      "title": "DW’s top video collection",
+      "textPreview": "Skip next section Top video  Top video  My holy car — An obsession made in Germany  Cars and Transportation  04/09/2026April 9, 2026  86:04 min  Why the US won't leave Cuba alone  Politics  04/07/2026",
+      "category": "general"
+    },
+    {
+      "site": "www.france24.com",
+      "articleUrl": "https://www.france24.com/en/somalia-islamic-state-group-new-front-line-africa",
+      "status": "success",
+      "wordCount": 250,
+      "title": "Reporters - Somalia, the Islamic State group's new front line in Africa",
+      "textPreview": "Somalia, the Islamic State group's new front line in Africa  Africa  To display this content from YouTube, you must enable advertisement tracking and audience measurement.  Accept  Manage my choices  ",
+      "category": "general"
+    },
+    {
+      "site": "www.politico.com",
+      "articleUrl": null,
+      "status": "fetch-failed",
+      "error": "Homepage fetch: HTTP 403",
+      "category": "general"
+    },
+    {
+      "site": "thehill.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "general"
+    },
+    {
+      "site": "www.axios.com",
+      "articleUrl": null,
+      "status": "fetch-failed",
+      "error": "Homepage fetch: HTTP 403",
+      "category": "general"
+    },
+    {
+      "site": "www.theatlantic.com",
+      "articleUrl": "https://www.theatlantic.com/ideas/2026/04/pope-leo-iran-war/686757/",
+      "status": "success",
+      "wordCount": 1006,
+      "title": "The Iran War Showed a New Side of Pope Leo",
+      "textPreview": "Catholics didn’t take long to conclude that Pope Leo XIV would be an unassuming leader. In contrast with the voluble Pope Francis, who clearly delighted in provoking controversy with off-the-cuff stat",
+      "category": "general"
+    },
+    {
+      "site": "www.slate.com",
+      "articleUrl": "https://slate.com/life/2026/04/social-media-democrats-post-instagram-x-mamdani.html",
+      "status": "success",
+      "wordCount": 1065,
+      "title": "Democrats Have Found Their Answer to the Way Trump Posts Online. It’s Slightly Mortifying.",
+      "textPreview": "Copy Link  Share  Share  Comment  Sign up for the Slatestto get the most insightful analysis, criticism, and advice out there, delivered to your inbox daily.  Any story about the Democrats’ social med",
+      "category": "general"
+    },
+    {
+      "site": "www.huffpost.com",
+      "articleUrl": "https://www.huffpost.com/news/politics",
+      "status": "success",
+      "wordCount": 297,
+      "title": "Politics - U.S. Political News, Opinion and Analysis",
+      "textPreview": "Skip to Main Content  Main Menu  U.S. Edition  Follow Us  Terms  |  Privacy Policy  Part of HuffPost Politics. ©2026 BuzzFeed, Inc. All rights reserved.  Trending  Strait Still Shut And Lebanon Fighti",
+      "category": "general"
+    },
+    {
+      "site": "www.vox.com",
+      "articleUrl": "https://www.vox.com/politics/481087/us-iran-trump-war-israel-politics-explainer",
+      "status": "success",
+      "wordCount": 3574,
+      "title": "US strikes Iran: What you need to know",
+      "textPreview": "LIVE  UpdatedApr 8, 2026, 1:10 AM UTC  US strikes Iran: What you need to know  byVox Staff  We’re making this story accessible to all readers as a public service. Support our journalism by  becoming a",
+      "category": "general"
+    },
+    {
+      "site": "www.salon.com",
+      "articleUrl": "https://www.salon.com/2026/04/10/the-cracks-in-trumps-coalition-keep-growing-but-when-does-it-break/",
+      "status": "success",
+      "wordCount": 2038,
+      "title": "The cracks in Trump's coalition keep growing — but when does it break?",
+      "textPreview": "Advertisement:  commentary  The cracks in Trump’s coalition keep growing — but when does it break?  Congressional Republicans are praising the president publicly, and screaming into their pillows priv",
+      "category": "general"
+    },
+    {
+      "site": "www.motherjones.com",
+      "articleUrl": "https://www.motherjones.com/media/2026/04/chatgpt-tumbler-ridge-fsu-openai-chatbots-mass-shootings/",
+      "status": "success",
+      "wordCount": 4052,
+      "title": "The chilling role of ChatGPT in mass shootings and other violence",
+      "textPreview": "Share on Facebook  Share on Twitter  <?xml version=\"1.0\" encoding=\"UTF-8\"?>Share on Bluesky  Email  Comments  Get your news from a source that’s not owned and controlled by oligarchs.  Sign up for the",
+      "category": "general"
+    },
+    {
+      "site": "www.theintercept.com",
+      "articleUrl": "https://theintercept.com/2026/04/10/reddit-ice-protest-grand-jury/",
+      "status": "success",
+      "wordCount": 384,
+      "title": "A Redditor Criticized ICE. Trump Is Trying to Unmask Them by Dragging the Company to a Secret Grand Jury.",
+      "textPreview": "IT’S EVEN WORSE THAN WE THOUGHT.  What we’re seeing right now from Donald Trump is a full-on authoritarian takeover of the U.S. government.  This is not hyperbole.  Court orders are being ignored. MAG",
+      "category": "general"
+    },
+    {
+      "site": "www.propublica.org",
+      "articleUrl": "https://www.propublica.org/article/prospect-medical-malpractice-bankruptcy-hospitals-doctors-philadelphia",
+      "status": "success",
+      "wordCount": 3160,
+      "title": "For-Profit Hospital Chain Never Put Aside Money for Malpractice Insurance to Compensate Injured Patients",
+      "textPreview": "Reporting Highlights  Left Out:  The failure of a hospital chain that provided its own malpractice insurance threatens to leave injured patients with no recourse.  Absent Oversight:  States give littl",
+      "category": "general"
+    },
+    {
+      "site": "www.thedailybeast.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "general"
+    },
+    {
+      "site": "www.rawstory.com",
+      "articleUrl": "https://www.rawstory.com/inflation-2676697463/",
+      "status": "success",
+      "wordCount": 332,
+      "title": "Trump's Iran war sends prices soaring in 'largest' increase in nearly two years: WSJ",
+      "textPreview": "FILE PHOTO: A sticker featuring U.S. President Donald Trump and Elon Musk, at a gas station on Capitol Hill in Washington, D.C., U.S., March 8, 2026. REUTERS/Nathan Howard//File Photo  Prices in the U",
+      "category": "general"
+    },
+    {
+      "site": "www.buzzfeednews.com",
+      "articleUrl": "https://www.buzzfeednews.com/article/buzzfeednews/buzzfeed-news-oral-history-2012-2023",
+      "status": "success",
+      "wordCount": 12064,
+      "title": "“We Were Always Playing An Entirely Different Game”: The Ultimate Oral History Of BuzzFeed News",
+      "textPreview": "“We Were Always Playing An Entirely Different Game”: The Ultimate Oral History Of BuzzFeed News  BuzzFeed News has been described as a chaos agent, a pirate ship, a reputable news organization, and, m",
+      "category": "general"
+    },
+    {
+      "site": "www.vice.com",
+      "articleUrl": "https://www.vice.com/en/article/vice-magazine-is-coming-back/",
+      "status": "success",
+      "wordCount": 568,
+      "title": "You Can Now Subscribe to VICE Magazine",
+      "textPreview": "Important:  The fall 2025 issue of VICE magazine—The Be Quiet and Drive Issue—is now sold out. Subscribe today and the first one you get will be the winter issue.  Clickhereto do so.  2025 sees the gl",
+      "category": "general"
+    },
+    {
+      "site": "www.latimes.com",
+      "articleUrl": "https://www.latimes.com/00000192-788e-ddaa-a39a-7abfc6b30000-123",
+      "status": "success",
+      "wordCount": 1030,
+      "title": "LA Times Media Group Streaming",
+      "textPreview": "L.A. Times Live Feeds  LA Times Media Group Streaming  LAX  Hollywood  Culver City  Inglewood  Malibu View  Trending News  How thousands of sensitive LAPD files got leaked online — and what happens ne",
+      "category": "general"
+    },
+    {
+      "site": "www.chicagotribune.com",
+      "articleUrl": "https://www.chicagotribune.com/2026/04/09/rainbow-push-yusef-jackson-rev-jesse-jackson-new-leader/",
+      "status": "success",
+      "wordCount": 542,
+      "title": "Rainbow PUSH taps youngest son of late Rev. Jesse Jackson as new leader",
+      "textPreview": "Yusef Jackson opens his arms during a private funeral service for his father, the Rev. Jesse Jackson, at Rainbow PUSH Coalition headquarters in Chicago, March 7, 2026. (Josh Boland/Chicago Tribune)  B",
+      "category": "general"
+    },
+    {
+      "site": "www.sfchronicle.com",
+      "articleUrl": "https://www.sfchronicle.com/realestate/article/home-price-san-francisco-22196556.php",
+      "status": "success",
+      "wordCount": 997,
+      "title": "S.F. homes are selling for record amounts. But overall values? Not even close",
+      "textPreview": "Bay Area  //  Real Estate  S.F. homes are selling for record amounts. But overall values? Not even close  The rise of artificial intelligence-based wealth in San Francisco has drastically changed the ",
+      "category": "general"
+    },
+    {
+      "site": "www.bostonglobe.com",
+      "articleUrl": "https://www.bostonglobe.com/2026/04/10/magazine/ai-use-college-writing-courses/",
+      "status": "success",
+      "wordCount": 977,
+      "title": "Colleges ban generative AI in writing classes. Students use it anyway. - The Boston Globe",
+      "textPreview": "Looking for workarounds in required writing courses is nothing new for college students. Those trying to avoid writing essays and reports could always buy them. It was expensive and risky: Would the p",
+      "category": "general"
+    },
+    {
+      "site": "www.miamiherald.com",
+      "articleUrl": "https://www.miamiherald.com/news/business/article315362500.html#storylink=hpdigest_sports",
+      "status": "success",
+      "wordCount": 541,
+      "title": "For 2026 FIFA World Cup, see how much you can earn on Airbnb",
+      "textPreview": "Airbnb has unveiled a new tool that allows hosts to find out how much money they can earn from renting out their properties during the 2026 FIFA World Cup.  Property owners could  enter their informat",
+      "category": "general"
+    },
+    {
+      "site": "www.denverpost.com",
+      "articleUrl": "https://www.denverpost.com/2026/04/10/xcel-energy-power-outages-burying-lines/",
+      "status": "success",
+      "wordCount": 2698,
+      "title": "Is burying power lines really a ‘no-brainer’ to cut wildfire risk in Colorado?",
+      "textPreview": "A crew works to place power lines underground for Xcel Energy in Southeast Denver on Tuesday, Feb. 10, 2026. (Photo by AAron Ontiveroz/The Denver Post)  By  Judith Kohler  |  jkohler@denverpost.com  |",
+      "category": "general"
+    },
+    {
+      "site": "www.seattletimes.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "general"
+    },
+    {
+      "site": "www.ajc.com",
+      "articleUrl": "https://www.ajc.com/sports/2026/04/a-uga-legend-showed-up-for-the-1960-masters-hes-been-every-year-since/",
+      "status": "success",
+      "wordCount": 900,
+      "title": "A UGA legend showed up for the 1960 Masters. He’s been every year since",
+      "textPreview": "ByFletcher Page  Updated 2 hours ago  AUGUSTA — In 1960, Loran Smith stood behind the 18th green at the Masters as a college student, waiting for Arnold Palmer to putt.  Palmer was a stroke away from ",
+      "category": "general"
+    },
+    {
+      "site": "www.texastribune.org",
+      "articleUrl": "https://www.texastribune.org/2026/04/10/texas-snap-food-stamps-diabetes-hypoglycemia-sugar-soda-ban/",
+      "status": "success",
+      "wordCount": 1450,
+      "title": "Texas’ SNAP ban on sugar troubles diabetics and hypoglycemics",
+      "textPreview": "Audio recording is automated for accessibility. Humans wrote and edited the story. See our  AI policy  , and give us  feedback  .  While filling up at a gas station recently, Janell Britton’s vision s",
+      "category": "general"
+    },
+    {
+      "site": "www.azcentral.com",
+      "articleUrl": "https://www.azcentral.com/story/news/politics/elections/2026/04/10/gallego-kelly-call-for-feds-to-drop-arizona-election-probe/89543018007/",
+      "status": "extract-failed",
+      "error": "fetch failed",
+      "category": "general"
+    },
+    {
+      "site": "www.nationalreview.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "www.weeklystandard.com",
+      "articleUrl": null,
+      "status": "fetch-failed",
+      "error": "Homepage fetch: HTTP 522",
+      "category": "conservative"
+    },
+    {
+      "site": "www.commentary.org",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "www.city-journal.org",
+      "articleUrl": "https://www.city-journal.org/article/the-tax-nexus-cometh",
+      "status": "success",
+      "wordCount": 3745,
+      "title": "The Tax Nexus Cometh",
+      "textPreview": "A  small, employee-owned New Hampshire outfit, Littleton Coin Company, sells currency through its website to collectors. After the Supreme Court  ruled  in its 2018  South Dakota  v.  Wayfair  decisio",
+      "category": "conservative"
+    },
+    {
+      "site": "spectator.org",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "www.washingtonexaminer.com",
+      "articleUrl": "https://www.washingtonexaminer.com/section/news/white-house/",
+      "status": "extract-failed",
+      "error": "Couldn't extract readable text from this page",
+      "category": "conservative"
+    },
+    {
+      "site": "www.washingtontimes.com",
+      "articleUrl": "https://www.washingtontimes.com/news/seen-heard-and-whispered/",
+      "status": "success",
+      "wordCount": 299,
+      "title": "Seen, Heard and Whispered",
+      "textPreview": "Seen, Heard and Whispered  Written by Alex Swoyer, \"Seen, Heard & Whispered” is a weekly column taking you inside the conversations happening in Washington’s power corridors, the moves being made and ",
+      "category": "conservative"
+    },
+    {
+      "site": "www.breitbart.com",
+      "articleUrl": "https://www.breitbart.com/clips/2026/04/10/media-iran-war-disgrace-are-they-actually-rooting-for-the-ayatollahs-to-spite-trump/",
+      "status": "success",
+      "wordCount": 135,
+      "title": "Media Iran War Disgrace: Are They Actually Rooting for the Ayatollahs to Spite Trump?",
+      "textPreview": "Thursday on “The Alex Marlow Show,” host and Breitbart Editor-in-Chief Alex Marlow  The media, also, for whatever reason seems to be encouraging our enemies and trying to act as though the Iranian gov",
+      "category": "conservative"
+    },
+    {
+      "site": "www.dailywire.com",
+      "articleUrl": "https://www.dailywire.com/news/watch-live-artemis-ii-phones-home-during-lunar-flyby?topStoryPosition=undefined&author=Daily+Wire&category=News&elementPosition=0&row=1&rowHeadline=Top+Stories&rowType=Top+Stories&title=LIVE+UPDATES%3A+Moon+Astronauts+Face+13+Critical+Minutes+As+Historic+Splashdown+Begins",
+      "status": "success",
+      "wordCount": 136,
+      "title": "LIVE UPDATES: Moon Astronauts Face 13 Critical Minutes As Historic Splashdown Begins",
+      "textPreview": "SIGN UP  Menu  Close  Download the  Daily Wire App  LOG IN  SIGN UP  Listen to Article  Listen to this Article  1x  Your browser does not support the audio element.  Credit: Photo by NASA via Getty Im",
+      "category": "conservative"
+    },
+    {
+      "site": "www.theblaze.com",
+      "articleUrl": "https://www.theblaze.com/align/what-poker-taught-me-about-being-a-man",
+      "status": "success",
+      "wordCount": 891,
+      "title": "What poker taught me about being a man | Blaze Media",
+      "textPreview": "Those of us who have played this game for years know that it's not really about cards.  Kenny Rogers had a theory. It fit neatly into a chorus. You have to know when to hold them, when to fold them, w",
+      "category": "conservative"
+    },
+    {
+      "site": "www.newsmax.com",
+      "articleUrl": "https://www.newsmax.com/world/globaltalk/iran-us-negotiations/2026/04/10/id/1252489/",
+      "status": "extract-failed",
+      "error": "Couldn't extract readable text from this page",
+      "category": "conservative"
+    },
+    {
+      "site": "oann.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "www.thegatewaypundit.com",
+      "articleUrl": "https://www.thegatewaypundit.com/2026/04/watch-no-nonsense-california-sheriff-delivers-chilling-message/",
+      "status": "success",
+      "wordCount": 449,
+      "title": "WATCH: No-Nonsense California Sheriff Delivers a Chilling Message to Criminals After Cops \"Intentionally\" Run Over Thug Who Murdered One of Their Own | The Gateway Pundit | by Cullen Linebarger",
+      "textPreview": "Truth  Tweet  Share  Gettr  Gab  Telegram  LinkedIn  Comments  SMS  Email  Print  Tulare County Sheriff Mike Boudreaux announces during a press conference that his deputies ran over a murderer who kil",
+      "category": "conservative"
+    },
+    {
+      "site": "www.americanthinker.com",
+      "articleUrl": "https://www.americanthinker.com/articles/2026/04/pakistan_tops_the_global_terrorism_index.html",
+      "status": "success",
+      "wordCount": 1053,
+      "title": "Pakistan Tops The Global Terrorism Index",
+      "textPreview": "Advertisement  Advertisement  Pakistan Tops The Global Terrorism Index  The problem when violence becomes routine.  Fatima El Hashimi  |  April 10, 2026  American Thinker  American Thinker  Getting yo",
+      "category": "conservative"
+    },
+    {
+      "site": "www.redstate.com",
+      "articleUrl": "https://www.redstate.com/wardclark/2026/04/10/palestinian-activists-appeal-denied-path-to-removal-now-clear-n2201153",
+      "status": "success",
+      "wordCount": 987,
+      "title": "'Palestinian' Activist's Appeal Denied, Path to Removal Now Clearer",
+      "textPreview": "'Palestinian' Activist's Appeal Denied, Path to Removal Now Clearer  By  Ward Clark  |  11:25 AM on April 10, 2026  The opinions expressed by contributors are their own and do not necessarily represen",
+      "category": "conservative"
+    },
+    {
+      "site": "www.townhall.com",
+      "articleUrl": "https://www.townhall.com/tipsheet/amy-curtis/2026/04/10/president-trump-vows-quick-and-severe-justice-for-illegal-alien-who-killed-florida-mom-n2674233",
+      "status": "success",
+      "wordCount": 1174,
+      "title": "Townhall - Conservative News, Political Analysis and Commentary",
+      "textPreview": "Townhall: Breaking Conservative News and Opinion  President Trump Vows 'Quick and Severe Justice' for Illegal Alien Who Killed Florida Mom  Amy Curtis  Another Democrat Has a Plan to Retaliate Against",
+      "category": "conservative"
+    },
+    {
+      "site": "www.powerlineblog.com",
+      "articleUrl": "https://www.powerlineblog.com/archives/2026/04/two-way-traffic.php",
+      "status": "extract-failed",
+      "error": "Could not load page (HTTP 403)",
+      "category": "conservative"
+    },
+    {
+      "site": "www.foxbusiness.com",
+      "articleUrl": "https://www.foxbusiness.com/economy/usps-halts-pension-contributions-warning-looming-cash-crisis",
+      "status": "success",
+      "wordCount": 498,
+      "title": "USPS halts pension contributions after warning of looming cash crisis",
+      "textPreview": "close  FOX Business Flash top headlines for April 9  Check out what's clicking on FoxBusiness.com.  The United States Postal Service is suspending employer pension contributions for workers beginning ",
+      "category": "conservative"
+    },
+    {
+      "site": "www.realclearpolitics.com",
+      "articleUrl": "https://www.realclearpolitics.com/2026/04/09",
+      "status": "success",
+      "wordCount": 370,
+      "title": "RealClearPolitics Posts on April 9, 2026 Archives",
+      "textPreview": "Subscribe  Sign In  |  SUBSCRIBE RCP+  RealClearPolitics April 9, 2026 Archives  RealClearPolitics  Morning  Edition  Teetering Ceasefire Bodes Ill for Treacherous Talks Ahead  Stephen Collinson  ,  C",
+      "category": "conservative"
+    },
+    {
+      "site": "www.pjmedia.com",
+      "articleUrl": "https://www.pjmedia.com/rick-moran/2026/04/10/its-a-mmiwg2slgbtqqia-world-and-were-just-living-in-it-n4951643",
+      "status": "success",
+      "wordCount": 1024,
+      "title": "It's a MMIWG2SLGBTQQIA+ World and We're Just Living In It",
+      "textPreview": "It's a MMIWG2SLGBTQQIA+ World and We're Just Living In It  Rick Moran  |  9:18 AM on April 10, 2026  AP Photo/Trisha Ahmed  What is MMIWG2SLGBTQQIA+? It might be a new, super-strong password. Maybe it",
+      "category": "conservative"
+    },
+    {
+      "site": "www.instapundit.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "www.hotair.com",
+      "articleUrl": "https://www.hotair.com/tree-hugging-sister/2026/04/10/how-do-you-spell-oppressed-in-canadian-simple-its-mmiwg2slgbtqqia-n3813755",
+      "status": "success",
+      "wordCount": 1445,
+      "title": "How Do You Spell 'Oppressed' in Canadian? Simple - It's MMIWG2SLGBTQQIA+",
+      "textPreview": "How Do You Spell 'Oppressed' in Canadian? Simple - It's MMIWG2SLGBTQQIA+  Beege Welborn  11:20 AM | April 10, 2026  AP Photo/Eric Gay  Oh, Canada...  CANADA.  You know, they want so awfully to be take",
+      "category": "conservative"
+    },
+    {
+      "site": "www.thefederalist.com",
+      "articleUrl": "https://thefederalist.com/2026/04/09/here-are-the-8-most-insane-things-in-the-dignidad-amnesty-bill/",
+      "status": "success",
+      "wordCount": 1134,
+      "title": "The 8 Most Insane Things In The 'DIGNIDAD' Amnesty Bill",
+      "textPreview": "Share  Share Article on Facebook  Share Article on Twitter  Share Article on Truth Social  Copy Article Link  Share Article via Email  Despite President Donald Trump winning on the promise of “mass de",
+      "category": "conservative"
+    },
+    {
+      "site": "www.dailysignal.com",
+      "articleUrl": "https://www.dailysignal.com/2026/04/10/exclusive-freedom-caucus-members-say-they-will-reject-all-amnesty-proposals/",
+      "status": "success",
+      "wordCount": 655,
+      "title": "EXCLUSIVE: Freedom Caucus Members Say They Will Reject All Amnesty Proposals",
+      "textPreview": "FIRST ON THE DAILY SIGNAL —  Members of the  House Freedom Caucus  say they are going to reject any legislation they see as granting mass amnesty to illegal aliens.  In statements made to The Daily Si",
+      "category": "conservative"
+    },
+    {
+      "site": "www.heritage.org",
+      "articleUrl": "https://www.heritage.org/education/commentary/marylands-assault-private-education",
+      "status": "success",
+      "wordCount": 830,
+      "title": "Maryland’s Assault on Private Education",
+      "textPreview": "It garnered virtually no headlines, but the Maryland House of Representatives recently passed sweeping legislation that makes it abundantly clear that the Democratic supermajority in Annapolis is comi",
+      "category": "conservative"
+    },
+    {
+      "site": "www.cato.org",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "www.aei.org",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "reason.com",
+      "articleUrl": "https://reason.com/2026/04/10/why-is-it-so-damn-hard-to-find-sympathetic-student-loan-victims/",
+      "status": "success",
+      "wordCount": 717,
+      "title": "Why is it so damn hard to find sympathetic student loan 'victims'?",
+      "textPreview": "Is any subgenre of journalism more debased and alienating than the student-loan sob story? If paying for college with heavily subsidized, federally backed loans was in fact the cause of the new, unive",
+      "category": "conservative"
+    },
+    {
+      "site": "www.mises.org",
+      "articleUrl": "https://www.mises.org/mises-wire/note-currency-colonial-america",
+      "status": "success",
+      "wordCount": 1641,
+      "title": "A Note on “Currency” in Colonial America | Mises Institute",
+      "textPreview": "Accurate words and definitions always matter, however, it is often underappreciated how important this is in the study of history, especially regarding context-dependent words and meanings. A common h",
+      "category": "conservative"
+    },
+    {
+      "site": "fee.org",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "www.lifenews.com",
+      "articleUrl": null,
+      "status": "fetch-failed",
+      "error": "Homepage fetch: HTTP 403",
+      "category": "conservative"
+    },
+    {
+      "site": "www.lifesitenews.com",
+      "articleUrl": "https://www.lifesitenews.com/news/exorcist-fr-ripperger-tells-tucker-carlson-the-u-s-is-under-the-control-of-high-level-demons/?utm_source=featured-news&utm_campaign=usa",
+      "status": "success",
+      "wordCount": 718,
+      "title": "Exorcist Fr. Ripperger tells Tucker Carlson the U.S. is under the control of high-level demons - LifeSite",
+      "textPreview": "Emily Mangiaracina  Comments  30  Thu Apr 9, 2026 - 5:53 pm EDTFri Apr 10, 2026 - 5:19 am EDT  (  LifeSiteNews  ) —  Exorcist Father Chad Ripperger told Tucker Carlson the U.S. has surrendered itself ",
+      "category": "conservative"
+    },
+    {
+      "site": "www.christianpost.com",
+      "articleUrl": null,
+      "status": "fetch-failed",
+      "error": "Homepage fetch: HTTP 403",
+      "category": "conservative"
+    },
+    {
+      "site": "cnsnews.com",
+      "articleUrl": "https://cnsnews.com/blogs/cnsnews/craig-bannister/2026/04/01/nevada-democrat-congresswoman-lee-drops-f-bombs-late-night",
+      "status": "success",
+      "wordCount": 752,
+      "title": "CNSNews",
+      "textPreview": "Latest  Nevada Dem Congresswoman Drops F-Bombs in Late-Night Anti-Trump Tweet  Craig Bannister  Colorado Can’t Ban Counselors from Helping Minors Shun LGBTQ Ideology  Craig Bannister  Only 31% Support",
+      "category": "conservative"
+    },
+    {
+      "site": "www.onenewsnow.com",
+      "articleUrl": null,
+      "status": "fetch-failed",
+      "error": "Homepage fetch: HTTP 404",
+      "category": "conservative"
+    },
+    {
+      "site": "www.dailycaller.com",
+      "articleUrl": "https://www.dailycaller.com/2026/04/09/iran-partially-opens-hormuz-strait-admits-mines-israel-lebanon-netanyahu/",
+      "status": "success",
+      "wordCount": 712,
+      "title": "Iran Partially Opens Strait Of Hormuz, Admits To Placing Naval Mines",
+      "textPreview": "Iranian Deputy Foreign Minister Saeed Khatibzadeh informed the world that Tehran would open the Strait of Hormuz in a limited capacity during an interview on Thursday.  Khatibzadeh admitted in the int",
+      "category": "conservative"
+    },
+    {
+      "site": "justthenews.com",
+      "articleUrl": "https://justthenews.com/government/congress/senator-opens-probe-tech-giants-over-alleged-online-child-exploitation-0",
+      "status": "success",
+      "wordCount": 1476,
+      "title": "Senator opens probe into tech giants over alleged online child exploitation reporting failures",
+      "textPreview": "Senator opens probe into tech giants over alleged online child exploitation reporting failures  Senator Chuck Grassley’s new probe will examine how tech giants report suspected child exploitation onli",
+      "category": "conservative"
+    },
+    {
+      "site": "www.epochtimes.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "nypost.com",
+      "articleUrl": "https://nypost.com/2026/04/10/us-news/trump-gives-zohran-mamdani-three-tips-to-improve-nyc-on-his-100th-day-as-mayor/",
+      "status": "success",
+      "wordCount": 388,
+      "title": "Exclusive | Trump gives Mamdani three tips to improve NYC on his 100th day as mayor: ‘Make it sparkle’",
+      "textPreview": "WASHINGTON — President Trump offered three suggestions to  Zohran Mamdani on his 100th day  running New York City — saying he wanted the mayor to make his hometown “sparkle.”  Trump, 79, and Mamdani, ",
+      "category": "conservative"
+    },
+    {
+      "site": "www.outkick.com",
+      "articleUrl": "https://www.outkick.com/sports/adam-schefter-grilled-over-russini-vrabel-scandal-got-uncomfortable",
+      "status": "success",
+      "wordCount": 541,
+      "title": "Adam Schefter Grilled Over Russini-Vrabel 'Scandal' And It Got Uncomfortable",
+      "textPreview": "The Dianna Russini-Mike Vrabel (alleged) SCANDAL is now on Day 3, with no end in sight.  The two spoke about it after the  poolside pictures went viral.  They both denied anything nefarious happening.",
+      "category": "conservative"
+    },
+    {
+      "site": "twitchy.com",
+      "articleUrl": "https://twitchy.com/dougp/2026/04/10/calif-ags-explanation-why-trumps-late-to-the-party-on-fraud-is-an-epic-dem-rake-stomp-n2427001",
+      "status": "success",
+      "wordCount": 831,
+      "title": "Calif. AG's Explanation Why Trump's 'Late to the Party' on Fraud Is an EPIC Dem Rake Stomp",
+      "textPreview": "THIS! Guy Benson Leaves Neera Tanden SPEECHLESS After Brutal Back and Forth About...  Rep. María Elvira Salazar Has 24-Hour Meltdown When Called OUT on Her Amnesty...  Nick Shirley Torches Gavin Newso",
+      "category": "conservative"
+    },
+    {
+      "site": "www.frontpagemag.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    },
+    {
+      "site": "www.humanevents.com",
+      "articleUrl": "https://www.humanevents.com/2026/04/07/jd-vance-backs-orban-campaign-in-hungary-as-election-nears-trump-calls-in-i-love-that-viktor",
+      "status": "success",
+      "wordCount": 520,
+      "title": "JD Vance backs Orban campaign in Hungary as election nears—Trump calls in: ‘I love that Viktor’",
+      "textPreview": "http://humanevents.com/2026/04/07/jd-vance-backs-orban-campaign-in-hungary-as-election-nears-trump-calls-in-i-love-that-viktor  NEWS & ANALYSIS  JD Vance backs Orban campaign in Hungary as election ne",
+      "category": "conservative"
+    },
+    {
+      "site": "www.conservativereview.com",
+      "articleUrl": "https://www.conservativereview.com/trump-lashes-out-at-crumbling-nato-alliance-following-frank-closed-door-meeting-2676693203.html",
+      "status": "success",
+      "wordCount": 47,
+      "title": "Trump lashes out at crumbling NATO alliance following 'frank' closed-door meeting",
+      "textPreview": "President Donald Trump continues to bash NATO after meeting behind closed doors with Secretary-General Mark Rutte, further signaling that the alliance could be crumbling. Trump has long been critical ",
+      "category": "conservative"
+    },
+    {
+      "site": "www.westernjournal.com",
+      "articleUrl": null,
+      "status": "no-article",
+      "error": "No article link found on homepage",
+      "category": "conservative"
+    }
+  ],
+  "summary": {
+    "total": 94,
+    "success": 65,
+    "failed": 29,
+    "errorPatterns": {
+      "homepage-link-detection": [
+        "www.abcnews.go.com",
+        "thehill.com",
+        "www.thedailybeast.com",
+        "www.seattletimes.com",
+        "www.nationalreview.com",
+        "www.commentary.org",
+        "spectator.org",
+        "oann.com",
+        "www.instapundit.com",
+        "www.cato.org",
+        "www.aei.org",
+        "fee.org",
+        "www.epochtimes.com",
+        "www.frontpagemag.com",
+        "www.westernjournal.com"
+      ],
+      "4xx-error": [
+        "www.wsj.com",
+        "www.forbes.com",
+        "www.thestreet.com",
+        "www.politico.com",
+        "www.axios.com",
+        "www.powerlineblog.com",
+        "www.lifenews.com",
+        "www.christianpost.com",
+        "www.onenewsnow.com"
+      ],
+      "content-extraction-failure": [
+        "www.aljazeera.com",
+        "www.washingtonexaminer.com",
+        "www.newsmax.com"
+      ],
+      "other": [
+        "www.azcentral.com"
+      ],
+      "5xx-error": [
+        "www.weeklystandard.com"
+      ]
+    }
+  }
+}
