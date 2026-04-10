@@ -44,13 +44,13 @@ export default function App() {
   const colors = {
     bg: isDark ? '#000000' : '#FFFFFF',
     surface: isDark ? '#1C1C1E' : '#F2F2F7',
-    inputBg: isDark ? '#1C1C1E' : '#FFFFFF',
-    inputBorder: isDark ? '#38383A' : '#D1D1D6',
+    inputBg: isDark ? '#2C2C2E' : '#FFFFFF',
+    inputBorder: isDark ? '#636366' : '#C7C7CC',
     text: isDark ? '#FFFFFF' : '#000000',
     secondary: isDark ? '#8E8E93' : '#6D6D72',
     accent: '#FF3B30',
     border: isDark ? '#38383A' : '#E5E5EA',
-    placeholder: isDark ? '#48484A' : '#C7C7CC',
+    placeholder: isDark ? '#8E8E93' : '#AEAEB2',
   };
 
   const wordCount = inputText.trim() ? inputText.trim().split(/\s+/).filter(Boolean).length : 0;
