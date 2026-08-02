@@ -1,3 +1,5 @@
+import { Linking } from 'react-native';
+
 export interface FeedbackData {
   url: string;
   extractedText: string;
@@ -6,28 +8,27 @@ export interface FeedbackData {
   title?: string;
 }
 
+const FEEDBACK_EMAIL = 'hello@collality.com';
+
 export async function submitFeedback(data: FeedbackData): Promise<void> {
-  // In a real app, you'd send this to your backend or a service like LogSnag, Sentry, or a simple Webhook.
-  // For now, we'll log it to the console and simulate a network request.
-  
-  console.log('--- FEEDBACK SUBMITTED ---');
-  console.log('URL:', data.url);
-  console.log('Title:', data.title);
-  console.log('User Comment:', data.userComment);
-  console.log('Text length:', data.extractedText.length);
-  console.log('--------------------------');
+  const subject = encodeURIComponent('Single Word Feedback');
 
-  // Simulate a delay
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  const body = encodeURIComponent(
+    [
+      data.userComment ? `Comment: ${data.userComment}` : '',
+      data.url ? `URL: ${data.url}` : '',
+      data.title ? `Title: ${data.title}` : '',
+      `Time: ${data.timestamp}`,
+      data.extractedText
+        ? `\nExtracted text (first 500 chars):\n${data.extractedText.slice(0, 500)}`
+        : '',
+    ]
+      .filter(Boolean)
+      .join('\n')
+  );
 
-  // If you had a webhook, it would look something like this:
-  /*
-  const WEBHOOK_URL = 'https://your-feedback-endpoint.com/api/feedback';
-  const response = await fetch(WEBHOOK_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  });
-  if (!response.ok) throw new Error('Failed to submit feedback');
-  */
+  const mailtoUrl = `mailto:${FEEDBACK_EMAIL}?subject=${subject}&body=${body}`;
+  const canOpen = await Linking.canOpenURL(mailtoUrl);
+  if (!canOpen) throw new Error('No email app available');
+  await Linking.openURL(mailtoUrl);
 }

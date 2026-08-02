@@ -2,6 +2,8 @@ export interface WordObject {
   text: string;
   orpIndex: number;
   delayMultiplier: number;
+  /** Optional target WPM for this word — used by demo mode to ramp speed */
+  targetWpm?: number;
 }
 
 /**

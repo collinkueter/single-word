@@ -56,11 +56,10 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
         userComment: comment,
         timestamp: new Date().toISOString(),
       });
-      Alert.alert('Feedback Sent', 'Thank you! This helps us improve our parsing engine.');
       setComment('');
       onClose();
     } catch {
-      Alert.alert('Error', 'Failed to send feedback. Please try again.');
+      Alert.alert('Error', 'No email app found. Please email hello@collality.com directly.');
     } finally {
       setIsSubmitting(false);
     }

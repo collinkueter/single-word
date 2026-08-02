@@ -1,20 +1,37 @@
 {
+  "cli": {
+    "appVersionSource": "remote"
+  },
   "build": {
     "development": {
       "developmentClient": true,
       "distribution": "internal",
       "channel": "development",
+      "autoIncrement": true,
       "ios": {
         "simulator": false
       },
-      "node": "24.12.0"
+      "node": "24.12.0",
+      "env": {
+        "ENTRY_FILE": "index.ts"
+      }
     },
     "preview": {
       "distribution": "internal",
-      "channel": "preview"
+      "channel": "preview",
+      "autoIncrement": true,
+      "node": "24.12.0",
+      "env": {
+        "ENTRY_FILE": "index.ts"
+      }
     },
     "production": {
-      "channel": "production"
+      "channel": "production",
+      "autoIncrement": true,
+      "node": "24.12.0",
+      "env": {
+        "ENTRY_FILE": "index.ts"
+      }
     }
   },
   "submit": {

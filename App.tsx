@@ -17,19 +17,19 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
 import { useReaderStore } from './src/store/useReaderStore';
+import { useOTAUpdate } from './src/hooks/useOTAUpdate';
 import { RSVPReader } from './src/components/RSVPReader';
 import { TraditionalReader } from './src/components/TraditionalReader';
 import { Controls } from './src/components/Controls';
 import { extractTextFromUrl } from './src/utils/web-extractor';
 import { FeedbackModal } from './src/components/FeedbackModal';
-
-const SAMPLE_TEXT =
-  'The science of speed reading is fascinating. Traditional reading forces your eyes to jump across the page in a series of movements called saccades. These movements consume significant mental energy and slow you down. Speed reading using RSVP — Rapid Serial Visual Presentation — eliminates eye movement entirely. Words come to you at a fixed focal point, one by one. Your brain processes each word instantly without searching for it. With practice, readers consistently achieve 400 to 600 words per minute. The average person reads around 250 words per minute. By training your focus and reducing subvocalization, you can double or even triple your reading speed while maintaining full comprehension of the text.';
+import { buildDemoWords } from './src/utils/demo-text';
 
 type ReadMode = 'rsvp' | 'full';
 
 export default function App() {
-  const { rawText, setText, words, theme, setTheme } = useReaderStore();
+  useOTAUpdate();
+  const { rawText, setText, setDemoText, words, theme, setTheme } = useReaderStore();
   const [inputText, setInputText] = useState(rawText);
   const [readMode, setReadMode] = useState<ReadMode>('rsvp');
   const [urlInput, setUrlInput] = useState('');
@@ -58,6 +58,14 @@ export default function App() {
 
   const handleStart = () => {
     if (inputText.trim()) setText(inputText.trim());
+  };
+
+  const handleDemo = () => {
+    const { text, words: demoWords } = buildDemoWords();
+    setInputText(text);
+    setCurrentUrl('');
+    setFetchedTitle(null);
+    setDemoText(text, demoWords);
   };
 
   const handleBack = () => {
@@ -210,22 +218,22 @@ export default function App() {
                         </Text>
                       )}
                       <View style={styles.inputFooterActions}>
+                        <Pressable
+                          onPress={handleDemo}
+                          hitSlop={8}
+                          accessibilityLabel="Load demo"
+                        >
+                          <Text style={[styles.demoLink, { color: colors.accent }]}>Demo</Text>
+                        </Pressable>
                         {inputText.length > 0 && (
                           <Pressable
                             onPress={() => { setInputText(''); setFetchedTitle(null); setCurrentUrl(''); }}
                             hitSlop={8}
                             accessibilityLabel="Clear text"
                           >
-                            <Ionicons name="close-circle" size={18} color={colors.secondary} />
+                            <Ionicons name="close-circle" size={20} color={colors.secondary} />
                           </Pressable>
                         )}
-                        <Pressable
-                          onPress={() => { setInputText(SAMPLE_TEXT); setCurrentUrl(''); }}
-                          hitSlop={8}
-                          accessibilityLabel="Load sample text"
-                        >
-                          <Text style={[styles.sampleLink, { color: colors.accent }]}>Sample text</Text>
-                        </Pressable>
                       </View>
                     </View>
                   </View>
@@ -465,9 +473,9 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: '500',
   },
-  sampleLink: {
-    fontSize: 13,
-    fontWeight: '600',
+  demoLink: {
+    fontSize: 16,
+    fontWeight: '700',
   },
   inputFooterActions: {
     flexDirection: 'row',
