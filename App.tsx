@@ -23,13 +23,13 @@ import { TraditionalReader } from './src/components/TraditionalReader';
 import { Controls } from './src/components/Controls';
 import { extractTextFromUrl } from './src/utils/web-extractor';
 import { FeedbackModal } from './src/components/FeedbackModal';
-import { buildDemoWords } from './src/utils/demo-text';
+import { DemoAssessment } from './src/components/DemoAssessment';
 
 type ReadMode = 'rsvp' | 'full';
 
 export default function App() {
   useOTAUpdate();
-  const { rawText, setText, setDemoText, words, theme, setTheme } = useReaderStore();
+  const { rawText, setText, words, theme, setTheme } = useReaderStore();
   const [inputText, setInputText] = useState(rawText);
   const [readMode, setReadMode] = useState<ReadMode>('rsvp');
   const [urlInput, setUrlInput] = useState('');
@@ -38,6 +38,7 @@ export default function App() {
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [fetchedTitle, setFetchedTitle] = useState<string | null>(null);
   const [isFeedbackVisible, setIsFeedbackVisible] = useState(false);
+  const [showAssessment, setShowAssessment] = useState(false);
 
   const isDark = theme === 'dark';
 
@@ -61,11 +62,7 @@ export default function App() {
   };
 
   const handleDemo = () => {
-    const { text, words: demoWords } = buildDemoWords();
-    setInputText(text);
-    setCurrentUrl('');
-    setFetchedTitle(null);
-    setDemoText(text, demoWords);
+    setShowAssessment(true);
   };
 
   const handleBack = () => {
@@ -90,6 +87,17 @@ export default function App() {
       setIsFetching(false);
     }
   };
+
+  // ─── SPEED READING TEST (overlay) ───────────────────────────────────────────
+  if (showAssessment) {
+    return (
+      <DemoAssessment
+        isDark={isDark}
+        onToggleTheme={() => setTheme(isDark ? 'light' : 'dark')}
+        onExit={() => setShowAssessment(false)}
+      />
+    );
+  }
 
   // ─── HOME SCREEN ────────────────────────────────────────────────────────────
   if (words.length === 0) {
