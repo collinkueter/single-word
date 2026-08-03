@@ -2,9 +2,9 @@ import { WordObject, parseText } from './text-parsing';
 
 /**
  * Demo text segments with target WPM for each section.
- * The story establishes a normal baseline then ramps up quickly, reaching the
- * 500+ range early and climbing into the 900s so the average speed lands well
- * above a typical reading pace.
+ * The story establishes a normal baseline then ramps up steadily, easing into
+ * the higher speeds and topping out in the 800s so the average lands comfortably
+ * above a typical reading pace without jumping too fast too soon.
  */
 const DEMO_SEGMENTS: { text: string; wpm: number }[] = [
   {
@@ -13,39 +13,39 @@ const DEMO_SEGMENTS: { text: string; wpm: number }[] = [
   },
   {
     text: 'Traditional reading forces your eyes to jump across the page in movements called saccades. Each jump takes time and mental energy. Your brain spends more effort finding the next word than actually understanding it.',
-    wpm: 400,
+    wpm: 325,
   },
   {
     text: 'RSVP stands for Rapid Serial Visual Presentation. Instead of moving your eyes across text each word appears at a single focal point. Your brain can focus entirely on comprehension rather than navigation.',
-    wpm: 550,
+    wpm: 400,
   },
   {
     text: 'Notice the red highlighted letter in each word. That is the Optimal Recognition Point. Your eye naturally locks onto this position allowing your brain to recognize the word instantly without scanning it.',
-    wpm: 650,
+    wpm: 475,
   },
   {
     text: 'You may have noticed the speed is increasing. You are now reading faster than most people read normally. The key insight is that your brain can process words much faster than your eyes can move across a page.',
-    wpm: 700,
+    wpm: 550,
   },
   {
     text: 'By eliminating eye movement and reducing subvocalization which is that inner voice reading along with you it becomes possible to absorb text at speeds that would feel impossible with a traditional book or article.',
-    wpm: 750,
+    wpm: 625,
   },
   {
-    text: 'Right now you are reading at several times a normal reading pace. With practice this becomes natural. Many speed readers consistently achieve 500 to 900 words per minute while maintaining strong comprehension.',
-    wpm: 800,
+    text: 'Right now you are reading at several times a normal reading pace. With practice this becomes natural. Many speed readers consistently achieve 500 to 850 words per minute while maintaining strong comprehension.',
+    wpm: 700,
   },
   {
     text: 'The speed is still climbing and yet you can still understand every word. Your brain is adapting in real time. This is the power of focused attention combined with optimized word presentation.',
+    wpm: 775,
+  },
+  {
+    text: 'You are now reading at 800 words per minute which is more than triple the average. Imagine reading an entire book in half the time. Imagine getting through your daily articles and emails twice as fast.',
+    wpm: 800,
+  },
+  {
+    text: 'This is 850 words per minute. You made it. Paste any text or import a URL to start speed reading for real. The more you practice the faster and more natural it becomes. Happy reading.',
     wpm: 850,
-  },
-  {
-    text: 'You are now reading at 900 words per minute which is more than triple the average. Imagine reading an entire book in half the time. Imagine getting through your daily articles and emails twice as fast.',
-    wpm: 900,
-  },
-  {
-    text: 'This is 950 words per minute. You made it. Paste any text or import a URL to start speed reading for real. The more you practice the faster and more natural it becomes. Happy reading.',
-    wpm: 950,
   },
 ];
 
