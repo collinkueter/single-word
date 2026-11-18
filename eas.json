@@ -38,7 +38,10 @@
     "production": {
       "ios": {
         "ascAppId": "6762011561",
-        "appleTeamId": "XPM5SRVJPP"
+        "appleTeamId": "XPM5SRVJPP",
+        "ascApiKeyPath": "/Users/cbk/code/setvita/AuthKey_62CAFNTMLF.p8",
+        "ascApiKeyId": "62CAFNTMLF",
+        "ascApiKeyIssuerId": "4f4e38a6-48e8-4bc5-b32d-edf42ad6a344"
       }
     }
   }
